@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <!-- <img class="planet-image" src="./Images/planet-clipart-transparent-23.jpg" alt=""> -->
+    <img class="planet-image-01" src="./Images/moon-1.png" alt="">
+    <!-- <input type=""> -->
+    <div class="header">
+        <div class="material-symbols-outlined icon">auto_stories</div>
+        <h1>Library - The LOGO</h1>
+    </div>
+    <div class="toolbar">
+        <button id="cancel-btn" onclick="onCancelEditted()">Cancel</button>
+        <button id="edit-btn" onclick="onEdit()">Edit</button>
+        <button id="save-btn" onclick="onSave()">Save</button>
+        <button id="new-btn" onclick="onAdd()">New</button>
+        <!-- <button onclick="onAdd()">Edit</button> -->
+    </div>
+    <div class="book-grid" data-bind="foreach: books">
+        <div class="card">
+            <div class="book-title-div">
+                <h3 class="book-title" data-bind="text: $data.title"></h3>    
+            </div>
+            <div class="book-detail-section">
+                <div>
+                    <h5>Author Name: </h5>
+                    <div data-bind="text: $data.author"></div>
+                </div>
+                <div>
+                    <h5>Pages: </h5>
+                    <div data-bind="text: $data.pages">450</div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <select class="status-selector" name="reading-status" data-bind="value: $data.isRead" title="Status">
+                    <option value="Read">Read</option>
+                    <option value="Not Read">Not Read</option>
+                </select>
+                <button class="remove-book" data-bind="click: $parent.removeBook.bind($data, $index())">Remove Book</button>
+            </div>
+        </div>
+        <!-- <div class="card">
+            <div class="book-title-div">
+                <h3 class="book-title">Crime and Punishment</h3>    
+            </div>
+            <div>
+                <div>
+                    <h5>Author Name: </h5>
+                    <div>Fyodor Dostoevsky</div>
+                </div>
+                <div>
+                    <h5>Pages: </h5>
+                    <div>450</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="book-title-div">
+                <h3 class="book-title">The Count of Monte Cristo</h3>    
+            </div>
+            <div>
+                <div>
+                    <h5>Author Name: </h5>
+                    <div>Fyodor Dostoevsky</div>
+                </div>
+                <div>
+                    <h5>Pages: </h5>
+                    <div>450</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="book-title-div">
+                <h3 class="book-title">The historical development of the Heart </h3>    
+            </div>
+            <div>
+                <div>
+                    <h5>Author Name: </h5>
+                    <div>Fyodor Dostoevsky</div>
+                </div>
+                <div>
+                    <h5>Pages: </h5>
+                    <div>450</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="book-title-div">
+                <h3 class="book-title">Crime and Punishment</h3>    
+            </div>
+            <div>
+                <div>
+                    <h5>Author Name: </h5>
+                    <div>Fyodor Dostoevsky</div>
+                </div>
+                <div>
+                    <h5>Pages: </h5>
+                    <div>450</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="book-title-div">
+                <h3 class="book-title">Crime and Punishment</h3>    
+            </div>
+            <div>
+                <div>
+                    <h5>Author Name: </h5>
+                    <div>Fyodor Dostoevsky</div>
+                </div>
+                <div>
+                    <h5>Pages: </h5>
+                    <div>450</div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="book-title-div">
+                <h3 class="book-title">Crime and Punishment</h3>    
+            </div>
+            <div>
+                <div>
+                    <h5>Author Name: </h5>
+                    <div>Fyodor Dostoevsky</div>
+                </div>
+                <div>
+                    <h5>Pages: </h5>
+                    <div>450</div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+<script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
+
+<script src="app.js"></script>
+
+</html>

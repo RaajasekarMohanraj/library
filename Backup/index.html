@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="header">
+        <h1 id="logo">Library</h1>
+    </div>
+    <div style="direction: rtl;">
+        <input type="button" value="Add new Book" class="button-01" onclick="onAddNewBook()">
+
+    </div>
+    <dialog id="newBookDialog">
+        <form id="newBookForm" onsubmit="event.preventDefault()">
+            <label for="bookName">Book Title:</label><br>
+            <input type="text" id="bookName" name="bookName" placeholder="Notes from Underground" required><br>
+            <label for="authorName">Last name:</label><br>
+            <input type="text" id="authorName" name="authorName" placeholder="Fyodor Dostoevsky" required><br>
+            <label for="pageNumber">Total number of pages:</label><br>
+            <input type="number" id="pageNumber" name="pageNumber" placeholder="160"><br>
+            <label for="isRead">Have you read the book:</label><br>
+            <input type="checkbox" name="isRead" id="isBookRead">
+            <br><br>
+            <input class="button-02" type="submit" value="Submit" onclick="onSubmitNewBook()">
+        </form>
+        <div>
+            <input class="button-02" type="button" value="Cancel" onclick="onCloseDialog()">
+        </div> 
+    </dialog>
+    <div id="bookList"></div>
+</body>
+</html>

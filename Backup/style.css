@@ -1,0 +1,69 @@
+@font-face {
+    font-family: darlington-font;
+    src: url(./Font/darlington-font/DarlingtonDemo.ttf);
+}
+
+@font-face {
+    font-family: blacknorth;
+    src: url("./Font/black-north-font/Blacknorthdemo-mLE25.otf");
+}
+
+@font-face {
+    font-family: ananda-black;
+    src: url("./Font/ananda-black-font/AnandaBlackPersonalUseRegular-rg9Rx.ttf");
+}
+
+@font-face {
+    font-family: wedding-day;
+    src: url("./Font/weddingday-font/WeddingdayPersonalUseRegular-1Gvo0.ttf");
+}
+@font-face {
+    font-family: books-font;
+    src: url("./Font/sl-bookarts-font/Slbookarts-MWAx.ttf");
+}
+
+body{
+    background-color: #ebf9fc ;
+}
+
+
+
+#logo{
+    font-family: ananda-black, darlington-font, wedding-day, blacknorth;
+    display: block;
+    font-size: 50px;
+    color: #0C133B;
+    margin-block: 0px;
+    padding: 20px;
+}
+
+#header{
+    border-bottom: 3px solid #0C133B;
+}
+
+#dummy{
+    font-family: book-font;
+}
+
+
+.button-01{
+    font-size: 25px;
+    background-color: rgb(0 104 120);
+    margin: 15px;
+    border-radius: 10px;
+    color: #ebf9fc;
+    border: 0px #079207 solid;
+    cursor: pointer;
+}
+dialog{
+    padding: 1rem;
+}
+
+
+.button-02{
+    cursor:pointer;
+    font-size: 15px;
+    width: 100%;
+    margin: 10px 0px 5px 0px;
+    background-color: rgb(114, 177, 244);
+}

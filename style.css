@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("./Font/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+@font-face {
+    font-family: "Signika_Negative";
+    src: url("./Font/Signika_Negative/SignikaNegative-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Vollkorn";
+    src: url("./Font/Vollkorn/Vollkorn-VariableFont_wght.ttf");
+}
+
+*{
+    font-family: "Vollkorn";
+    color: white;
+}
+body{
+    min-height: calc(100vh - 60px);
+    padding: 30px;
+    margin: 0px;
+    height: 100%;
+    background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+}
+
+/* body{
+    url("./Images/planet-clipart-transparent-23.jpg");
+} */
+
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+}
+h1{
+    padding: 5px;
+    color: #F97C5C;
+    font-family: 'Bebas Neue';
+    font-size: 55px;
+}
+h3{
+    padding: 3px;
+}
+
+button{
+    background-color: rgba(202, 244, 254, 1);
+    border: 2px solid rgba(0, 204, 255, 0.9);
+    font-family: "Signika_Negative";
+    font-weight: 750;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    color: rgba(0, 64, 79, 0.6);
+    margin: 5px 15px 5px 15px;
+    box-shadow: rgba(0, 195, 255, 0.5) 0.005em 0.15em 0.5em;
+}
+button:hover{
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#no-data-text{
+    color: white;
+}
+
+.planet-image-01{
+    height: 900px;
+    width: 900px;
+    position: fixed;
+    filter: invert(-50%);
+    z-index: -1;
+    left:70%;
+    rotate: 50deg;
+    top:50%;
+}
+
+/* .planet-image-sun{
+    height: 150px;
+    width: 150px;
+    position: fixed;
+    filter: invert(-50%);
+    z-index: -1;
+    left:-30%;
+    rotate: 50deg;
+    top:-80%;
+} */
+.icon.material-symbols-outlined{
+    font-size: 55px;
+    display: inline;
+    padding: 5px;
+}
+
+.header{
+    margin: 2em 0px 2em 0px;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+}
+.toolbar{
+    direction: rtl;
+}
+.book-grid{
+    margin: 20px 0px 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 3rem;
+    
+}
+.card{
+    /* background-color: rgba(206, 236, 244, 0.1); */
+    height: 300px;
+    /* border: 3px solid rgb(7, 182, 201) ; */
+    width: 250px;
+    border: 3px solid rgba(0, 195, 255, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgba(0, 195, 255, 0.5) 0.005em 0.25em 0.5em;
+}
+
+.card::after{
+    background: rgb(5,69,105);
+    background: radial-gradient(circle, rgba(5,69,105,1) 0%, rgba(85,145,169,1) 72%, rgba(156,205,220,1) 100%);
+}   
+.book-title-div{
+    background-color: rgba(193, 213, 218, 0.1);
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid rgba(0, 195, 255, 0.5);
+    border-radius: 20px;
+}
+
+.book-title{
+    font-family: "Signika_Negative";
+    font-weight: 700;
+    font-size: xx-large;
+    padding: 10px;
+}
+
+.book-detail-section{
+    height: 25%;
+    /* background-color: white; */
+    padding: 0;
+    border-radius: 10px;
+}
+.card-footer{
+    height: 25%;
+    
+    padding: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.card-footer>div{
+    display: flex;
+    align-items: center;
+}
+
+.remove-book-no-display{
+    display:none;
+}
+
+.status-selector{
+    margin: 5px 15px 5px 15px;
+    background-color: inherit;
+}
+
+.status-selector>option{
+    background-color: #100751
+}
+.status-selector>option:hover{
+    background-color: #251a7c;
+}
+
+.remove-book{
+    background-color: rgb(164, 69, 69);
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-weight: 300;
+    border-radius: 0px;
+}
+
+.book-detail-section>div{
+    display: flex;
+    align-items: center;
+}
+
+.book-detail-section>div>*{
+    padding: 5px;
+}
+
+.book-detail-dialog{
+    position: absolute;
+    z-index: 50;
+    background-color: #050028;
+    border: 3px solid rgba(0, 195, 255, 0.5);
+    box-shadow: rgba(0, 195, 255, 0.5) 0.25em 0.75em 0.75em;
+    border-radius: 20px;
+}
+
+
+.form-fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+}
+
+.form-fieldset>div>input{
+    color: rgba(0, 195, 255, 1);
+    background-color: #100751;
+    border: 1px dotted;
+    
+}
+
+::placeholder {
+    color:rgba(0, 195, 255, 0.3);
+}
+
+::-ms-input-placeholder{
+    color:rgba(0, 195, 255, 0.3);
+}
+.form-fieldset>div>input:focus-visible{
+    outline: 2px solid rgba(0, 195, 255, 1);
+    border: none;
+}
